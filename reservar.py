@@ -7,7 +7,7 @@ PASS = "***REMOVED***"
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
 
-driver = Chrome(executable_path='/home/benru/berkana/chromedriver') 
+driver = Chrome(executable_path='chromedriver') 
 driver.get("https://crosshero.com/athletes/sign_in")
 driver.current_url
 user = driver.find_element_by_id("athlete_email") 
