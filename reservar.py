@@ -1,13 +1,24 @@
 import datetime
-from selenium.webdriver import Chrome
+from selenium import webdriver
 
 USER = "rubenfb14@gmail.com"
 PASS = "***REMOVED***"
 
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
+LOCAL_CHROMEDRIVER_PATH = './chromedriver'
+
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
 
-driver = Chrome(executable_path='/app/chromedriver') 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
+#comment the following line to use in local env.
+chrome_options.binary_location = GOOGLE_CHROME_PATH
+
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options) 
 driver.get("https://crosshero.com/athletes/sign_in")
 driver.current_url
 user = driver.find_element_by_id("athlete_email") 
