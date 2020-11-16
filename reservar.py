@@ -11,12 +11,12 @@ LOCAL_CHROMEDRIVER_PATH = './chromedriver'
 
 chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', "chromedriver")
 options = webdriver.ChromeOptions()
-#options.binary_location = chrome_bin
+options.binary_location = chrome_bin
 options.add_argument("--disable-gpu")
 options.add_argument("--no-sandbox")
 options.add_argument('headless')
 options.add_argument('window-size=1200x600')
-driver = webdriver.Chrome(executable_path=LOCAL_CHROMEDRIVER_PATH, chrome_options=options)
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
 
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
