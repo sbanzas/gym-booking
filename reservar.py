@@ -1,5 +1,6 @@
 import datetime
 from selenium import webdriver
+import os
 
 USER = "rubenfb14@gmail.com"
 PASS = "***REMOVED***"
