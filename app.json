@@ -1,0 +1,7 @@
+{
+  "name": "Gym booking",
+  "description": "Scheduled auto booking script, runs on heroku and notifies you through telegram bots",
+  "repository": "https://github.com/benru89/gym-booking",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["heroku", "selenium", "telegram"]
+}
