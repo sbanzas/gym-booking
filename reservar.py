@@ -35,14 +35,12 @@ driver.get("https://crosshero.com/dashboard/classes?date=" + str(tomorrow.day) +
 reservation_hour = driver.find_elements_by_xpath("//*[contains(text(), '19:30')]")
 reservation_hour[0].click()
 try:
-    element = WebDriverWait(driver, 100).until(
+    element = WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.ID, "classes-sign-in"))
     )
 except:
     print("no quedan sitios")
-finally:
-    driver.quit()
     
-time.sleep(11) 
+time.sleep(10) 
 driver.save_screenshot('screenie.png')
 bot.sendfile("./screenie.png")
