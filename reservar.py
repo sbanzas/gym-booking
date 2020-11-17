@@ -32,12 +32,13 @@ pasw = driver.find_element_by_id("athlete_password")
 pasw.send_keys(PASS)
 driver.find_element_by_name("commit").click()
 driver.get("https://crosshero.com/dashboard/classes?date=" + str(tomorrow.day) + "%2F" +  str(tomorrow.month) + "%2F" +  str(tomorrow.year) + "&program_id=599ea218204351000ec9130d")
-reservation_hour = driver.find_elements_by_xpath("//*[contains(text(), '19:30')]")
+reservation_hour = driver.find_elements_by_xpath("//*[contains(text(), '13:30')]")
 reservation_hour[0].click()
 try:
-    element = WebDriverWait(driver, 20).until(
+    element = WebDriverWait(driver, 100).until(
         EC.presence_of_element_located((By.ID, "classes-sign-in"))
     )
+    element.click()
 except:
     print("no quedan sitios")
     
