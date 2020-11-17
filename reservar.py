@@ -38,10 +38,11 @@ try:
     element = WebDriverWait(driver, 100).until(
         EC.presence_of_element_located((By.ID, "classes-sign-in"))
     )
+except:
+    print("no quedan sitios")
 finally:
     driver.quit()
-    print("no quedan sitios")
-
+    
 time.sleep(11) 
 driver.save_screenshot('screenie.png')
 bot.sendfile("./screenie.png")
