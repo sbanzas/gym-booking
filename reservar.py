@@ -55,7 +55,7 @@ def main():
     start = time.time()
     elapsed = 0
     button = None
-    while (button is None and elapsed < 20):
+    while (button is None and elapsed < 60):
         elapsed = int(time.time() - start)
         button = get_signin_button(driver)
         print(elapsed)
