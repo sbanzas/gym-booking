@@ -3,5 +3,6 @@ Due to covid restrictions my local gym enforces us to book a place if we want to
 
 This script run on an schedule on heroku and automatically books a place in the gym for tomorrow at 19.30. It uses selenium to go through the booking process, it waits until the booking button is available and then sends a screenshot with the confirmation screen, either directly to you or a telegram bot you designed.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/benru89/gym-booking)
+
 
