@@ -60,7 +60,7 @@ def main():
         button = get_signin_button(driver)
         print(elapsed)
 
-    if elapsed >= 60:
+    if elapsed > 59:
         print("non quedan sitios")
     elif button is not None:
         button.click()    
