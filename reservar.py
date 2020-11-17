@@ -14,10 +14,10 @@ CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 LOCAL_CHROMEDRIVER_PATH = './chromedriver'
 
 def configure_chromedriver():
-    chrome_bin = os.environ.get('GOOGLE_CHROME_BIN')
+    chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', "chromedriver")
     options = webdriver.ChromeOptions()
-    if chrome_bin:
-        options.binary_location = chrome_bin
+    #comment to use locally
+    options.binary_location = chrome_bin
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     #Comment this if you want to see the browser (only locally)
