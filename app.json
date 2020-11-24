@@ -22,6 +22,36 @@
     "GOOGLE_CHROME_BIN": {
       "description": "Chrome binary path",
       "value": "/app/.apt/usr/bin/google_chrome"
+    },
+     "API_HASH": {
+      "description": "Telegram API Hash",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Telegram API ID",
+      "value": ""
+    },
+     "USER": {
+      "description": "Website user",
+      "value": ""
+    },
+    "PASS": {
+      "description": "Website pass",
+      "value": ""
+    },
+    "SESSION_STRING": {
+      "description": "Telegram session string",
+      "value": "Pregenerated bot or normal user session string"
+    },
+    "RECEIVER_USERNAME": {
+      "description": "Telegram user",
+      "value": "Receiver username"
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram bot token",
+      "value": "Token if we want to generate bot session string"
     }
   }
+  
 }
+

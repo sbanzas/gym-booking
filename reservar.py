@@ -7,8 +7,8 @@ from selenium.common.exceptions import NoSuchElementException
 
 import telebot as bot
 
-USER = "rubenfb14@gmail.com"
-PASS = "aqnbqnxy21"
+USER = os.environ.get('USER')
+PASS = os.environ.get('PASS')
 
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 LOCAL_CHROMEDRIVER_PATH = './chromedriver'
