@@ -31,7 +31,6 @@ def sendfile(filepath):
     	client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH) 
     	client.connect() 
 
-	receiver1 = client.get_entity(RECEIVER_USERNAME)
-    client.send_file(receiver1, filepath) 
-		 
-	client.disconnect()
+    receiver1 = client.get_entity(RECEIVER_USERNAME)
+    client.send_file(receiver1, filepath) 	 
+    client.disconnect()
