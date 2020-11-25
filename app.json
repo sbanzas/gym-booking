@@ -40,17 +40,17 @@
       "value": ""
     },
     "SESSION_STRING": {
-      "description": "Telegram session string",
-      "value": "Pregenerated bot or normal user session string",
+      "description": "Telegram bot or user session string",
+      "value": "",
       "required": false
     },
     "RECEIVER_USERNAME": {
-      "description": "Telegram user",
-      "value": "Receiver username"
+      "description": "Receiver username",
+      "value": ""
     },
     "BOT_TOKEN": {
-      "description": "Telegram bot token",
-      "value": "Token if we want to generate bot session string",
+      "description": "Bot token",
+      "value": "",
       "required": false
     }
   }
