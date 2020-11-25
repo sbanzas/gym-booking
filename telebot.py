@@ -7,8 +7,8 @@ from telethon import TelegramClient, sync, events
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 
-API_ID = 'API_ID'
-API_HASH = 'API_HASH'
+API_ID = os.environ.get('API_ID')
+API_HASH = os.environ.get('API_HASH')
 RECEIVER_USERNAME = os.environ.get('RECEIVER_USERNAME')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 
