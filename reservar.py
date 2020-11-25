@@ -40,8 +40,10 @@ def nav_to_booking_page(driver):
     driver.get("https://crosshero.com/dashboard/classes?date=" + str(tomorrow.day)
         + "%2F" +  str(tomorrow.month) + "%2F"
                 +  str(tomorrow.year) + "&program_id=599ea218204351000ec9130d")
-    reservation_hour = driver.find_elements_by_xpath("//*[contains(text(), '19:30')]")
-    reservation_hour[0].click()
+                
+    driver.find_element(By.ID, "select2-class_reservation_single_class_id-container").click()
+    driver.find_element(By.CSS_SELECTOR, ".select2-search__field").send_keys("19:30")
+    driver.find_element(By.CSS_SELECTOR, ".select2-search__field").send_keys(Keys.ENTER)
  
 def get_signin_button(driver):
     button = None
