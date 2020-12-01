@@ -14,7 +14,7 @@ PASS = os.environ.get('PASS')
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 LOCAL_CHROMEDRIVER_PATH = './chromedriver'
 BOOK_TIME = os.environ.get('TIME', '18:00')
-IS_LOCAL = True
+IS_LOCAL = False
 
 def configure_chromedriver():
     chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', 'chromedriver')
