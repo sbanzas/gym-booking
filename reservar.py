@@ -13,7 +13,8 @@ PASS = os.environ.get('PASS')
 
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 LOCAL_CHROMEDRIVER_PATH = './chromedriver'
-IS_LOCAL = True
+BOOK_TIME = os.environ.get('TIME', '18:00')
+IS_LOCAL = False
 
 def configure_chromedriver():
     chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', 'chromedriver')
@@ -42,7 +43,7 @@ def nav_to_booking_page(driver):
     program = "&program_id=599ea218204351000ec9130d"
     driver.get(base+str(tomorrow.day)+"%2F"+str(tomorrow.month)+"%2F"+str(tomorrow.year)+program)
     driver.find_element_by_id("select2-class_reservation_single_class_id-container").click()
-    driver.find_element_by_css_selector(".select2-search__field").send_keys("19:30")
+    driver.find_element_by_css_selector(".select2-search__field").send_keys(BOOK_TIME)
     driver.find_element_by_css_selector(".select2-search__field").send_keys(Keys.ENTER)
  
 def get_signin_button(driver):

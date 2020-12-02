@@ -52,6 +52,11 @@
       "description": "Bot token",
       "value": "",
       "required": false
+    },
+    "TIME": {
+      "description": "Booking time",
+      "value": "18:00",
+      "required": true
     }
   }
   
